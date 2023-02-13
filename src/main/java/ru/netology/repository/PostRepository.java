@@ -11,11 +11,11 @@ import java.util.Optional;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicLong;
 
-@Repository
+
 public class PostRepository {
 
   private final Map<Long, Post> posts = new ConcurrentHashMap<>(){};
-  private final AtomicLong counter = new AtomicLong(1);
+  private final AtomicLong counter = new AtomicLong(0L);
 
   public List<Post> all() {
     return new ArrayList<>(posts.values());
