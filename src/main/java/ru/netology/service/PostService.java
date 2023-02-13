@@ -1,15 +1,13 @@
 package ru.netology.service;
 
-import org.springframework.stereotype.Service;
 import ru.netology.exception.NotFoundException;
 import ru.netology.model.Post;
 import ru.netology.repository.PostRepository;
-
 import java.util.List;
+import org.springframework.stereotype.Service;
 
 @Service
 public class PostService {
-  // сервис завязан на интерфейс, а не на конкретную реализацию
   private final PostRepository repository;
 
   public PostService(PostRepository repository) {
@@ -32,4 +30,3 @@ public class PostService {
     repository.removeById(id);
   }
 }
-
